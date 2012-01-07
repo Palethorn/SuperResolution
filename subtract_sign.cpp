@@ -1,6 +1,6 @@
 #include "header.h"
 
-void subtract_sign(Mat& src1, Mat&src2, Mat& dest)
+void subtract_sign(Mat& src1, Mat& src2, Mat& dest)
 {
     for(int j=0;j<src1.rows;j++)
     {

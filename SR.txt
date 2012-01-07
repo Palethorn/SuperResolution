@@ -1,0 +1,19 @@
+main
+{
+    createDegradedImageandSparseMat32F
+    {
+        createDownsampledMotionandBlurCCDSparseMat32f
+        mulSparseMat32f
+        visualizeSparseMat
+    }
+    addgaussnoise
+    addspikenoise
+    superresolutionSparseMat32f
+    {
+        btvregularization
+        mulSparseMat32f
+        subtract_sign
+        sum_float_OMP
+        getPSNR
+    }
+}

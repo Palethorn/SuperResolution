@@ -81,7 +81,8 @@ void superresolutionSparseMat32f(Mat src[], Mat& dest, SparseMat DHF[], const in
         putText(dest,name,Point(15,50), FONT_HERSHEY_DUPLEX,1.5,CV_RGB(255,255,255),2);
 
         sprintf(name,"iteration%04d.png",i);
-        imshow("SRimage",dest);waitKey(30);
+        imshow("SRimage",dest);
+	waitKey(30);
         imwrite(name,dest);
         cout<<"time/iteration"<<(getTickCount()-t)*1000.0/getTickFrequency()<<"ms"<<endl;
     }
